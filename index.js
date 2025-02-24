@@ -1,5 +1,8 @@
 const expresss = require('express');
+const mongoose = require('mongoose');
 require('dotenv').config;
+
+const { Item, Restaurant } = require('./RestaurantSchema');
 
 const PORT = process.env.PORT || 3000;
 
@@ -12,6 +15,7 @@ app.get('/',(req,res) => {
 app.listen(PORT, ()=>{
     console.log(`Server running on the PORT: ${PORT}`);
 })
+
 
 
 
